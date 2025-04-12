@@ -1,4 +1,4 @@
-import { Avatar, Badge,  Layout, theme } from 'antd';
+import { Avatar, Badge, Layout, theme } from 'antd';
 import { HiOutlineBell } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 // import { RxHamburgerMenu } from "react-icons/rx";
@@ -21,7 +21,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ setCollapsed, collapsed }) => {
                     background: colorBgContainer,
                 }}
             >
-                <div className=' flex justify-end pr-4  bg-[#ffffff]'>
+                <div className=' flex justify-end pr-4  bg-barColor'>
                     {/* <Button
                         type="text"
                         icon={collapsed ? <RxHamburgerMenu className=' text-white -ml-8 w-8 h-8 ' /> : <RxHamburgerMenu className=' text-white -ml-8 w-8 h-8 ' />}

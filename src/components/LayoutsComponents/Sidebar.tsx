@@ -1,6 +1,7 @@
 import { Layout, Menu, } from 'antd';
 import { Link } from 'react-router-dom';
 // import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.svg'
 import { CiLogout } from 'react-icons/ci';
 const { Sider } = Layout;
 
@@ -13,11 +14,10 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
 
     return (
-        <div className='fixed top-0 left-0 bottom-0 bg-[#ffffff]'>
-            <Sider className='h-[100vh] w-[300px] bg-[#ffffff]' width={250} collapsedWidth={80} trigger={null} collapsible collapsed={collapsed}>
-                <div className=' flex justify-center items-center py-7'>
-                    {/* <img src={logo} className=' w-28' /> */}
-                    LOGO
+        <div className='fixed top-0 left-0 bottom-0 bg-barColor '>
+            <Sider className='h-[100vh] w-[300px] bg-barColor' width={250} collapsedWidth={80} trigger={null} collapsible collapsed={collapsed}>
+                <div className=' flex justify-center items-center py-7 '>
+                    <img src={logo} className=' w-20' />
                 </div>
 
                 <Menu
@@ -91,15 +91,17 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                     ]}
                 />
             </Sider>
-            <Link to={`/auth/login`}>
-                <div
-                    // onClick={handleLogOut}
-                    className=" absolute bottom-12 w-full flex justify-center cursor-pointer gap-3 items-center"
-                >
-                    <CiLogout className=" w-8 h-8 text-primary" />
-                    <p className=" text-primary text-lg">Log Out</p>
-                </div>
-            </Link>
+            <div className="flex justify-center items-center relative">
+                <Link to="/auth/login" className="w-full flex justify-center">
+                    <div
+                        className="absolute bottom-12 w-[80%] py-2 bg-[#f6f6f6] hover:bg-gray-100 shadow-md rounded-lg flex justify-center items-center gap-3 cursor-pointer transition-all duration-200"
+                    >
+                        <CiLogout className="w-6 h-6 text-[#222]" />
+                        <p className="text-base font-medium text-[#222]">Log Out</p>
+                    </div>
+                </Link>
+            </div>
+
         </div>
     );
 };

@@ -2,7 +2,12 @@ import { Layout, Menu, } from 'antd';
 import { Link } from 'react-router-dom';
 // import logo from '../../assets/logo.svg'
 import logo from '../../assets/logo.svg'
+import dashboard from '../../assets/sideBar/dashboard.svg'
+import income from '../../assets/sideBar/income.svg'
+// import dashboardActive from '../../assets/sideBar/active-dashboard.svg'
 import { CiLogout } from 'react-icons/ci';
+// import { useLocation } from 'react-router-dom';
+
 const { Sider } = Layout;
 
 import React from 'react';
@@ -12,6 +17,8 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
+    // const location = useLocation();
+
 
     return (
         <div className='fixed top-0 left-0 bottom-0 bg-barColor '>
@@ -23,12 +30,20 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                 <Menu
                     mode="inline"
                     className='px-2 custom-menu'
+                    // selectedKeys={[location.pathname]}
                     defaultSelectedKeys={['1']}
                     items={[
                         {
                             key: '1',
-                            // icon: <img src={dashboard} />,
-                            label: <Link className='' to={`/`}>Dashboard</Link>,
+                            // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
+                            icon: <img src={dashboard} className='menu-icon' />,
+                            label: <Link className=' text-[16px]' to={`/`}>Dashboard</Link>,
+                        },
+                        {
+                            key: '2',
+                            // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
+                            icon: <img src={income} className='menu-icon' />,
+                            label: <Link className=' text-[16px]' to={`/income`}>Income</Link>,
                         },
                         // {
                         //     key: '2',

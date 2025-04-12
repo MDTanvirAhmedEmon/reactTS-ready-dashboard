@@ -10,9 +10,9 @@ const MainLayout = () => {
 
 
     return (
-        <div className="">
+        <div className=" ">
             {/* in the layout bg color is setup for not to show the animation delay make sure the menu color and this color are same */}
-            <Layout className="">
+            <Layout className=" ">
                 <Sidebar collapsed={collapsed} ></Sidebar>
                 <Layout
                     style={{
@@ -23,7 +23,7 @@ const MainLayout = () => {
                     {/* my header */}
                     <MainHeader setCollapsed={setCollapsed} collapsed={collapsed}></MainHeader>
                     <Content
-                        className="p-5 bg-[#e8e8e8] min-h-screen"
+                        className="p-5 min-h-screen bg-[#ececec] "
                         style={{}}
                     >
                         {/* my content */}

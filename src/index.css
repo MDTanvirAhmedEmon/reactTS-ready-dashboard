@@ -8,21 +8,11 @@
 }
 
 /* menu */
-/* .custom-menu .ant-menu-item-selected .menu-icon {
+.custom-menu .ant-menu-item-selected .menu-icon {
   color: #42004a;
-} */
-/* This goes in your global CSS or scoped styles (e.g., App.css or Sidebar.module.css) */
+}
+
+/* menu item bg color */
 .ant-menu-light .ant-menu-item {
   background-color: #f6f6f6 !important;
-
-}
-
-/* Ensure selected and hover still override it */
-.ant-menu-light .ant-menu-item-selected {
-  background-color: #f6f6f6 !important;
-  color: #4E4E4E !important;
-}
-.ant-menu-light .ant-menu-item:hover {
-  background-color: #f6f6f6 !important;
-  color: #4E4E4E !important;
 }

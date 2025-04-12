@@ -2,8 +2,8 @@ import { Layout, Menu, } from 'antd';
 import { Link } from 'react-router-dom';
 // import logo from '../../assets/logo.svg'
 import logo from '../../assets/logo.svg'
-import dashboard from '../../assets/sideBar/dashboard.svg'
-import income from '../../assets/sideBar/income.svg'
+// import dashboard from '../../assets/sideBar/dashboard.svg'
+// import income from '../../assets/sideBar/income.svg'
 // import dashboardActive from '../../assets/sideBar/active-dashboard.svg'
 import { CiLogout } from 'react-icons/ci';
 // import { useLocation } from 'react-router-dom';
@@ -11,6 +11,9 @@ import { CiLogout } from 'react-icons/ci';
 const { Sider } = Layout;
 
 import React from 'react';
+import { RiBarChartGroupedLine, RiDashboard3Line, RiSettings2Line, RiUserLine } from 'react-icons/ri';
+import { IoAnalyticsOutline } from 'react-icons/io5';
+import { MdOutlineCategory } from 'react-icons/md';
 
 interface SidebarProps {
     collapsed: boolean;
@@ -36,14 +39,40 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                         {
                             key: '1',
                             // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
-                            icon: <img src={dashboard} className='menu-icon' />,
+                            // icon: <img src={dashboard} className='menu-icon text-primaryColor' />,
+                            icon: <RiDashboard3Line className='w-6 h-6' />,
                             label: <Link className=' text-[16px]' to={`/`}>Dashboard</Link>,
                         },
                         {
                             key: '2',
                             // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
-                            icon: <img src={income} className='menu-icon' />,
+                            // icon: <img src={income} className='menu-icon' />,
+                            icon: <IoAnalyticsOutline className='w-6 h-6' />,
                             label: <Link className=' text-[16px]' to={`/income`}>Income</Link>,
+                        },
+                        {
+                            key: '3',
+                            // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
+                            icon: <RiBarChartGroupedLine className='w-6 h-6' />,
+                            label: <Link className=' text-[16px]' to={`/income`}>Subscriptions</Link>,
+                        },
+                        {
+                            key: '4',
+                            // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
+                            icon: <RiUserLine className='w-6 h-6' />,
+                            label: <Link className=' text-[16px]' to={`/income`}>User Details</Link>,
+                        },
+                        {
+                            key: '5',
+                            // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
+                            icon: <MdOutlineCategory className='w-6 h-6' />,
+                            label: <Link className=' text-[16px]' to={`/income`}>Manage</Link>,
+                        },
+                        {
+                            key: '6',
+                            // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
+                            icon: <RiSettings2Line className='w-6 h-6' />,
+                            label: <Link className=' text-[16px]' to={`/income`}>Settings</Link>,
                         },
                         // {
                         //     key: '2',

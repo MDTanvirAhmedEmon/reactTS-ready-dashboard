@@ -1,5 +1,6 @@
 import { Avatar, Badge, Layout, theme } from 'antd';
 import { HiOutlineBell } from 'react-icons/hi';
+import { RxHamburgerMenu } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
 // import { RxHamburgerMenu } from "react-icons/rx";
 const { Header } = Layout;
@@ -21,18 +22,9 @@ const MainHeader: React.FC<MainHeaderProps> = ({ setCollapsed, collapsed }) => {
                     background: colorBgContainer,
                 }}
             >
-                <div className=' flex justify-end pr-4  bg-barColor'>
-                    {/* <Button
-                        type="text"
-                        icon={collapsed ? <RxHamburgerMenu className=' text-white -ml-8 w-8 h-8 ' /> : <RxHamburgerMenu className=' text-white -ml-8 w-8 h-8 ' />}
-                        onClick={() => setCollapsed(!collapsed)}
-                        className=' text-white '
-                        style={{
-                            fontSize: '16px',
-                            width: 64,
-                            height: 64,
-                        }}
-                    /> */}
+                <div className=' flex justify-between items-center pr-4  bg-barColor'>
+
+                    {collapsed ? <RxHamburgerMenu onClick={() => setCollapsed(!collapsed)} className=' text-black w-8 h-8 cursor-pointer' /> : <RxHamburgerMenu onClick={() => setCollapsed(!collapsed)} className=' text-black w-8 h-8 cursor-pointer' />}
                     <div className=' flex items-center gap-6'>
                         <div>
                             <Link className='flex items-center' to={`/notification`}>

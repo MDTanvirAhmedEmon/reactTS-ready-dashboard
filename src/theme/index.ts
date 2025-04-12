@@ -23,9 +23,12 @@ export const mainTheme = {
             "motionDurationSlow": "0.0s",
         },
         "Input": {
-            "activeBorderColor": "rgb(111,111,111)",
-            "hoverBorderColor": "rgb(111,111,111)",
-            "controlHeight": 40
+            "activeBorderColor": "rgb(222,222,222)",
+            "hoverBorderColor": "rgb(222,222,222)",
+            "colorPrimaryHover": "rgb(222,222,222)",
+            "colorPrimaryActive": "rgb(222,222,222)",
+            "colorBorder": "rgb(222,222,222)",
+            "controlHeight": 45
         },
         "Pagination": {
             "colorPrimary": "rgb(255,255,255)",

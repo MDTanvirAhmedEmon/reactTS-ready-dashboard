@@ -7,6 +7,7 @@ import ForgotPassword from '../pages/auth/ForgetPassword';
 import VerificationCode from '../pages/auth/VerificationCode';
 import SetNewPassword from '../pages/auth/SetNewPassword';
 import PasswordChangedSuccessfull from '../pages/auth/PasswordChangedSuccessfull';
+import Profile from '../pages/profile/profile';
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: "/income",
                 element: <Income></Income>,
+            },
+            {
+                path: "/settings/profile",
+                element: <Profile></Profile>,
             },
         ]
     },

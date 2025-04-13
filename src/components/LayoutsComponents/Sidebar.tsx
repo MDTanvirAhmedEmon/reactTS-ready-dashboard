@@ -73,6 +73,24 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                             // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
                             icon: <RiSettings2Line className='w-6 h-6' />,
                             label: <Link className=' text-[16px]' to={`/income`}>Settings</Link>,
+                            children: [
+                                {
+                                    key: "6-1",
+                                    label: <Link className={``} to={`/settings/profile`}>Profile</Link>,
+                                },
+                                {
+                                    key: "6-2",
+                                    label: <Link className={``} to={`/settings/about-us`}>About Us</Link>,
+                                },
+                                {
+                                    key: "6-3",
+                                    label: <Link className={``} to={`/settings/privacy-policy`}>Privacy Policy</Link>,
+                                },
+                                {
+                                    key: "6-4",
+                                    label: <Link className={``} to={`/settings/terms-and-condtion`}>Terms And Condition</Link>,
+                                },
+                            ]
                         },
                         // {
                         //     key: '2',

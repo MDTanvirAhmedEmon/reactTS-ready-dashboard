@@ -7,6 +7,22 @@
   --color-bgColor: #e7dae7;
 }
 
+@layer base {
+
+  h1 { 
+    font-size: 1.4rem; 
+  }
+
+  h2 { 
+    font-size: 1.2rem; 
+  }
+
+  h3 { 
+    font-size: 1.1rem; 
+  }
+}
+
+
 /* menu */
 .custom-menu .ant-menu-item-selected .menu-icon {
   color: #42004a;

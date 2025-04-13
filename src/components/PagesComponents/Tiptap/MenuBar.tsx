@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FaBold, FaItalic, FaUnderline, FaStrikethrough, FaAlignLeft, FaAlignCenter, FaAlignRight, FaAlignJustify, FaHeading } from 'react-icons/fa'; // Example icons
+import { Tooltip } from 'antd';
+import { FaBold, FaItalic, FaUnderline, FaStrikethrough, FaAlignLeft, FaAlignCenter, FaAlignRight, FaAlignJustify, FaHeading, FaListUl } from 'react-icons/fa'; // Example icons
 
 const MenuBar = ({ editor }: any) => {
 
@@ -83,6 +84,12 @@ const MenuBar = ({ editor }: any) => {
             isActive: editor.isActive({ textAlign: 'justify' }),
             icon: <FaAlignJustify />,
             label: 'Justify',
+        },
+        {
+            action: () => editor.chain().focus().toggleBulletList().run(), // Action for Bullet List
+            isActive: editor.isActive('bulletList'),
+            icon: <FaListUl />, // Bullet List icon
+            label: 'Bullet List',
         }
     ];
 
@@ -90,14 +97,15 @@ const MenuBar = ({ editor }: any) => {
         <div className=" mb-4">
             <div className=" flex space-x-2">
                 {menuItems.map((item, index) => (
-                    <button
-                        key={index}
-                        onClick={item.action}
-                        className={`flex items-center justify-center p-2 rounded-md ${item.isActive ? ' bg-[#000000be] text-white' : 'bg-gray-100 hover:bg-gray-200'} transition-all duration-200`}
-                    >
-                        <span className="mr-2">{item.icon}</span>
-                        {item.label}
-                    </button>
+                    <Tooltip key={index} title={item.label}>
+                        <button
+                            onClick={item.action}
+                            className={`flex items-center justify-center p-2 cursor-pointer rounded-md ${item.isActive ? ' bg-[#000000be] text-white' : 'bg-gray-100 hover:bg-gray-200'} transition-all duration-200`}
+                        >
+                            <span className="">{item.icon}</span>
+                            {/* {item.label} */}
+                        </button>
+                    </Tooltip>
                 ))}
             </div>
         </div>

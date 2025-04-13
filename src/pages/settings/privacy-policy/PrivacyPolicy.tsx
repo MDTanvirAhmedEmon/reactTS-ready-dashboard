@@ -42,7 +42,11 @@ const PrivacyPolicy = () => {
     })
     return (
         <div>
-            <MenuBar editor={editor} />
+            <div className=' flex justify-between items-center'>
+                <h1 className="text-2xl mb-3">Privacy Policy</h1>
+                <MenuBar editor={editor} />
+            </div>
+
             <EditorContent editor={editor} />
         </div>
     );

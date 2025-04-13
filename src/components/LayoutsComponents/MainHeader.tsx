@@ -1,5 +1,5 @@
-import { Avatar, Badge, Layout, theme } from 'antd';
-import { HiOutlineBell } from 'react-icons/hi';
+import { Avatar, Layout, theme } from 'antd';
+import { IoNotificationsOutline } from 'react-icons/io5';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
 // import { RxHamburgerMenu } from "react-icons/rx";
@@ -28,15 +28,19 @@ const MainHeader: React.FC<MainHeaderProps> = ({ setCollapsed, collapsed }) => {
                     <div className=' flex items-center gap-6'>
                         <div>
                             <Link className='flex items-center' to={`/notification`}>
-                                <Badge size="small" className=' cursor-pointer' count={5}>
-                                    <HiOutlineBell className=' w-7 h-7' />
-                                </Badge>
+                                <div className=' relative mt-[4px]'>
+                                    <IoNotificationsOutline className="w-7 h-7 text-primaryColor ">
+                                    </IoNotificationsOutline>
+                                    <span className="absolute -top-2 -right-[5px] bg-[#0e0e0eab] text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-semibold">
+                                        10
+                                    </span>
+                                </div>
                             </Link>
                         </div>
-                        <Link to={`/profile`}>
+                        <Link to={`/settings/profile`}>
                             <div className=' flex items-center gap-2 cursor-pointer '>
                                 <Avatar src={`https://avatar.iran.liara.run/public/24`} size={40} className=' ring-1 ring-[#1c4587]' />
-                                <p className=' text-black font-semibold'>Side Leader</p>
+                                <p className=' text-black font-semibold'>TA Emon</p>
                             </div>
                         </Link>
                     </div>

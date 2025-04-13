@@ -23,7 +23,7 @@ const MainLayout = () => {
                     {/* my header */}
                     <MainHeader setCollapsed={setCollapsed} collapsed={collapsed}></MainHeader>
                     <Content
-                        className="p-5 min-h-screen bg-bgColor"
+                        className="p-5 h-screen bg-bgColor"
                         style={{}}
                     >
                         {/* my content */}

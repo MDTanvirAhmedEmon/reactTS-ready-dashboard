@@ -7,7 +7,8 @@ import ForgotPassword from '../pages/auth/ForgetPassword';
 import VerificationCode from '../pages/auth/VerificationCode';
 import SetNewPassword from '../pages/auth/SetNewPassword';
 import PasswordChangedSuccessfull from '../pages/auth/PasswordChangedSuccessfull';
-import Profile from '../pages/profile/profile';
+import Profile from '../pages/profile/Profile';
+import Notification from '../pages/notification/Notification';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "/settings/profile",
                 element: <Profile></Profile>,
+            },
+            {
+                path: "/notification",
+                element: <Notification></Notification>,
             },
         ]
     },

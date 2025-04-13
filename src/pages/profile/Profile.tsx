@@ -1,12 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { FaCamera } from "react-icons/fa";
-import { Avatar, Upload, UploadFile } from "antd";
+import { Avatar, Upload } from "antd";
 import EditProfile from "../../components/PagesComponents/Profile/EditProfile";
 import ChangePassword from "../../components/PagesComponents/Profile/ChnagePassword";
 
 type Tab = "editProfile" | "changePassword";
 
 const Profile: React.FC = () => {
+    // const [profilePic, setProfilePic] = useState<File | null>(null);
     const [profilePic, setProfilePic] = useState<File | null>(null);
     console.log('state', profilePic);
     const [activeTab, setActiveTab] = useState<Tab>("editProfile");
@@ -14,13 +16,17 @@ const Profile: React.FC = () => {
     const handleSubmit = () => {
     };
 
-    const profilePicUrl = profilePic ? URL.createObjectURL(profilePic) : null;
-    console.log(profilePicUrl);
+    // const profilePicUrl = profilePic ? URL.createObjectURL(profilePic) : null;
+    // console.log(profilePicUrl);
 
-    const handleProfilePicUpload = (file: UploadFile) => {
-        console.log('from function', file);
-        setProfilePic(file.originFileObj as File);
-        return false;
+    // const handleProfilePicUpload = (file: UploadFile) => {
+    //     console.log('from function', file);
+    //     setProfilePic(file.originFileObj as File);
+    //     return false;
+    // };
+    const profilePicUrl = profilePic ? URL.createObjectURL(profilePic) : null;
+    const handleProfilePicUpload = (e: any) => {
+        setProfilePic(e.file);
     };
 
     return (
@@ -36,19 +42,20 @@ const Profile: React.FC = () => {
                             />
                             <Upload
                                 showUploadList={false}
-                                beforeUpload={(file) => handleProfilePicUpload(file)}
-                                className="absolute bottom-2 right-2 bg-[#86868650] px-2 py-[2px] rounded-full cursor-pointer"
+                                beforeUpload={() => false}
+                                onChange={handleProfilePicUpload}
+                                className="absolute bottom-2 right-2 bg-[#43004ac0] px-4 py-[5px] rounded-full cursor-pointer"
                             >
-                                <FaCamera className="text-white mt-[5px]" />
+                                <FaCamera className="text-white mt-[5px] w-6" />
                             </Upload>
                         </div>
                         <div>
-                            <p className="text-xl md:text-2xl font-bold capitalize">Jhon Dew</p>
-                            <p className="text-sm font-semibold">Super Admin</p>
+                            <p className="text-xl md:text-2xl text-black font-bold capitalize">TA Emon</p>
+                            <p className="text-sm text-black font-semibold">Super Admin</p>
                             {profilePic && (
                                 <button
                                     onClick={handleSubmit}
-                                    className="bg-white text-primary rounded-md mt-4 px-2 py-1"
+                                    className=" bg-primaryColor cursor-pointer text-primary rounded-md mt-4 px-2 py-1"
                                 >
                                     Upload Image
                                 </button>
@@ -59,8 +66,8 @@ const Profile: React.FC = () => {
                         <p
                             onClick={() => setActiveTab("editProfile")}
                             className={`cursor-pointer pb-1 ${activeTab === "editProfile"
-                                    ? "text-primary border-b-2 border-primary"
-                                    : "text-[#575757]"
+                                ? "text-primary border-b-2 border-primary"
+                                : "text-[#575757]"
                                 }`}
                         >
                             Edit Profile
@@ -68,8 +75,8 @@ const Profile: React.FC = () => {
                         <p
                             onClick={() => setActiveTab("changePassword")}
                             className={`cursor-pointer pb-1 ${activeTab === "changePassword"
-                                    ? "text-primary border-b-2 border-primary"
-                                    : "text-[#575757]"
+                                ? "text-primary border-b-2 border-primary"
+                                : "text-[#575757]"
                                 }`}
                         >
                             Change Password

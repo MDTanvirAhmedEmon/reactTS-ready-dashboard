@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout';
 import Dashboard from '../pages/dashboard/Dashboard';
 import LogIn from '../pages/auth/Login';
 import Income from '../pages/income/Income';
+import ForgotPassword from '../pages/auth/ForgetPassword';
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     {
         path: "/auth/login",
         element: <LogIn></LogIn>,
+    },
+    {
+        path: "/auth/forgot-password",
+        element: <ForgotPassword></ForgotPassword>,
     },
 
 ]);

@@ -4,6 +4,8 @@ import Dashboard from '../pages/dashboard/Dashboard';
 import LogIn from '../pages/auth/Login';
 import Income from '../pages/income/Income';
 import ForgotPassword from '../pages/auth/ForgetPassword';
+import VerificationCode from '../pages/auth/VerificationCode';
+import SetNewPassword from '../pages/auth/SetNewPassword';
 
 
 const router = createBrowserRouter([
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
     {
         path: "/auth/forgot-password",
         element: <ForgotPassword></ForgotPassword>,
+    },
+    {
+        path: "/auth/verification-code",
+        element: <VerificationCode></VerificationCode>,
+    },
+    {
+        path: "/auth/set-new-password",
+        element: <SetNewPassword></SetNewPassword>,
     },
 
 ]);

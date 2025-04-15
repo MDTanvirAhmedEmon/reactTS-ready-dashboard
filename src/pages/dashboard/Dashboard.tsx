@@ -3,6 +3,7 @@ import totalIncome from '../../assets/dashboard/total-income.png'
 import goldUser from '../../assets/dashboard/gold-user.png'
 import platinumUser from '../../assets/dashboard/platinum-user.png'
 import daimondUser from '../../assets/dashboard/daimond-user.png'
+import DailyServiceChart from '../../components/PagesComponents/Dashboard/DailyServiceChart'
 
 const Dashboard = () => {
     return (
@@ -37,6 +38,13 @@ const Dashboard = () => {
                     <h2 className=' mb-3 text-xl font-semibold text-[#4E4E4E]'>Diamond User </h2>
                     <img className=' mx-auto mb-3 w-12' src={daimondUser} alt="user" />
                     <h2 className='text-2xl font-semibold text-[#4E4E4E]'>22,650</h2>
+                </div>
+
+            </div>
+            <div className=' grid grid-cols-2 gap-8 mt-5' >
+                <div className=' bg-white px-5 py-4 rounded-lg'>
+                    <h2 className=' mb-4 text-2xl font-semibold text-primaryColor'>Daily Service</h2>
+                    <DailyServiceChart></DailyServiceChart>
                 </div>
 
             </div>

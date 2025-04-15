@@ -6,7 +6,7 @@
   --color-barColor: #efe6ef;
   --color-bgColor: #e7dae7;
 }
-
+/* Tiptap heading size */
 @layer base {
 
   h1 { 

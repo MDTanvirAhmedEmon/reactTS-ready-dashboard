@@ -72,7 +72,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                             key: '6',
                             // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
                             icon: <RiSettings2Line className='w-6 h-6' />,
-                            label: <Link className=' text-[16px]' to={`/income`}>Settings</Link>,
+                            label: <p className=' text-[16px]'>Settings</p>,
                             children: [
                                 {
                                     key: "6-1",

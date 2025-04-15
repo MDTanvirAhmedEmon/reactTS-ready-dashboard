@@ -6,7 +6,7 @@
   --color-barColor: #efe6ef;
   --color-bgColor: #e7dae7;
 }
-
+/* Tiptap heading size */
 @layer base {
 
   h1 { 
@@ -58,4 +58,8 @@
   border: none;
   box-shadow: none;
   outline: none;
+}
+/* fix Tiptap padding */
+.tiptap.ProseMirror {
+  padding: 10px 30px;
 }

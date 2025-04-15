@@ -59,3 +59,7 @@
   box-shadow: none;
   outline: none;
 }
+/* fix Tiptap padding */
+.tiptap.ProseMirror {
+  padding: 10px 30px;
+}

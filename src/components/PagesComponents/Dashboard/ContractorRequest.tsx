@@ -7,7 +7,7 @@ interface Name {
     lastName: string;
 }
 
-interface AdminData {
+interface UserData {
     _id: string;
     name: Name;
     email: string;
@@ -16,14 +16,14 @@ interface AdminData {
     role: string;
 }
 
-interface AdminMeta {
+interface UserMeta {
     limit: number;
     total: number;
 }
 
-interface AdminDataSource {
-    data: AdminData[];
-    meta: AdminMeta;
+interface UserDataSource {
+    data: UserData[];
+    meta: UserMeta;
 }
 
 
@@ -33,8 +33,8 @@ const ContractorRequest: React.FC = () => {
         console.log(values);
     };
 
-    // Admin data
-    const adminData: AdminDataSource = {
+    // User data
+    const userData: UserDataSource = {
         data: [
             {
                 _id: "1",
@@ -56,7 +56,7 @@ const ContractorRequest: React.FC = () => {
                 email: "jane.smith@example.com",
                 number: 88452215615,
                 location: "Dkaka, Bangladesh",
-                role: "Admin",
+                role: "User",
             },
             {
                 _id: "3",
@@ -81,12 +81,12 @@ const ContractorRequest: React.FC = () => {
         {
             title: "S No.",
             dataIndex: "id",
-            render: (_: any, record: AdminData) => <span>{record?._id}</span>,
+            render: (_: any, record: UserData) => <span>{record?._id}</span>,
         },
         {
             title: "Name",
             dataIndex: "name",
-            render: (_: any, record: AdminData) =>
+            render: (_: any, record: UserData) =>
                 <div className=' flex items-center gap-2'>
                     <img
                         src={`https://avatar.iran.liara.run/public/${record?._id}`}
@@ -101,21 +101,21 @@ const ContractorRequest: React.FC = () => {
         {
             title: "Email",
             dataIndex: "email",
-            render: (_: any, record: AdminData) => <span>{record?.email}</span>,
+            render: (_: any, record: UserData) => <span>{record?.email}</span>,
         },
         {
             title: "Contact Number",
             dataIndex: "number",
-            render: (_: any, record: AdminData) => <span>{record?.number}</span>,
+            render: (_: any, record: UserData) => <span>{record?.number}</span>,
         },
         {
             title: "Location",
             dataIndex: "location",
-            render: (_: any, record: AdminData) => <span>{record?.location}</span>,
+            render: (_: any, record: UserData) => <span>{record?.location}</span>,
         },
         // {
         //     title: "Action",
-        //     render: (_: any, record: AdminData) => (
+        //     render: (_: any, record: UserData) => (
         //         <div className="flex items-center">
         //             <Button
         //                 type="text"
@@ -143,7 +143,7 @@ const ContractorRequest: React.FC = () => {
             <Table
                 columns={columns}
                 className="mt-5 overflow-x-scroll xl:overflow-auto w-full bg-white rounded-lg"
-                dataSource={adminData?.data}
+                dataSource={userData?.data}
                 pagination={false}
                 rowKey="_id"
             />

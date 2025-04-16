@@ -1,6 +1,6 @@
 const Notification: React.FC = () => {
     return (
-        <div className="bg-white h-full rounded-md p-6 mx-auto">
+        <div className="bg-white h-full rounded-md p-6 mx-auto min-h-[100vh]">
             <div className="flex items-center justify-between pb-6">
                 <h3 className="font-bold text-2xl text-gray-800">Notifications</h3>
                 <button

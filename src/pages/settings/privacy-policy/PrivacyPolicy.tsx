@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
         }
     })
     return (
-        <div>
+        <div className='min-h-[100vh]'>
             <div className=' flex justify-between items-center'>
                 <h1 className="text-2xl mb-3">Privacy Policy</h1>
                 <MenuBar editor={editor} />

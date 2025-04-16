@@ -41,7 +41,9 @@ export const mainTheme = {
             "colorPrimary": "rgb(255,255,255)",
             "colorBorder": "rgba(217,217,217,0)",
             "borderRadius": 20,
-            "itemBg": "rgba(255,255,255,0)"
+            "itemBg": "rgba(255,255,255,0)",
+            "colorPrimaryBorder": "rgba(145,202,255,0)",
+            "colorPrimaryHover": "rgb(255,255,255)"
         }
     },
 };

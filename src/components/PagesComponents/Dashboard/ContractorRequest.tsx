@@ -142,7 +142,7 @@ const ContractorRequest: React.FC = () => {
             </div>
             <Table
                 columns={columns}
-                className="mt-5 overflow-x-scroll xl:overflow-auto w-full bg-white"
+                className="mt-5 overflow-x-scroll xl:overflow-auto w-full bg-white rounded-lg"
                 dataSource={adminData?.data}
                 pagination={false}
                 rowKey="_id"

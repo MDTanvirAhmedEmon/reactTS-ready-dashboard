@@ -5,6 +5,7 @@ import platinumUser from '../../assets/dashboard/platinum-user.png'
 import daimondUser from '../../assets/dashboard/daimond-user.png'
 import DailyServiceChart from '../../components/PagesComponents/Dashboard/DailyServiceChart'
 import MostUsingServicePie from '../../components/PagesComponents/Dashboard/MostUsingServicePie'
+import ContractorRequest from '../../components/PagesComponents/Dashboard/ContractorRequest'
 
 const Dashboard = () => {
     return (
@@ -75,6 +76,10 @@ const Dashboard = () => {
                     <MostUsingServicePie></MostUsingServicePie>
                 </div>
 
+            </div>
+
+            <div>
+                <ContractorRequest></ContractorRequest>
             </div>
 
         </div>

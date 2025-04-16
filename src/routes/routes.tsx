@@ -12,6 +12,7 @@ import Notification from '../pages/notification/Notification';
 import PrivacyPolicy from '../pages/settings/privacy-policy/PrivacyPolicy';
 import AboutUs from '../pages/settings/about-us/AboutUs';
 import TermsAndCondition from '../pages/settings/terms-and-conditon/TermsAndCondition';
+import UserDetails from '../pages/userDetails/userDetails';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "/income",
                 element: <Income></Income>,
+            },
+            {
+                path: "/user-details",
+                element: <UserDetails></UserDetails>,
             },
             {
                 path: "/settings/profile",

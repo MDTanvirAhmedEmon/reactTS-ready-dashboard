@@ -37,12 +37,11 @@ export const mainTheme = {
             "controlHeight": 45
         },
         "Pagination": {
+            "itemActiveBg": "rgb(66,0,74)",
             "colorPrimary": "rgb(255,255,255)",
-            "colorPrimaryHover": "rgb(255,255,255)",
-            "itemActiveBg": "rgb(28,69,135)",
-            "itemBg": "rgba(255,255,255,0)",
-            "colorPrimaryBorder": "rgb(255,255,255)",
-            "colorBgTextHover": "rgba(255,255,255,0.06)"
+            "colorBorder": "rgba(217,217,217,0)",
+            "borderRadius": 20,
+            "itemBg": "rgba(255,255,255,0)"
         }
     },
 };

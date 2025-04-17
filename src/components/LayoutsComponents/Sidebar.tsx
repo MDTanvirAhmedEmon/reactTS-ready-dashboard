@@ -54,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                             key: '3',
                             // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
                             icon: <RiBarChartGroupedLine className='w-6 h-6' />,
-                            label: <Link className=' text-[16px]' to={`/income`}>Subscriptions</Link>,
+                            label: <Link className=' text-[16px]' to={`/subscriptions`}>Subscriptions</Link>,
                         },
                         {
                             key: '4',
@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                             key: '5',
                             // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
                             icon: <MdOutlineCategory className='w-6 h-6' />,
-                            label: <Link className=' text-[16px]' to={`/income`}>Manage</Link>,
+                            label: <Link className=' text-[16px]' to={`/manage`}>Manage</Link>,
                         },
                         {
                             key: '6',

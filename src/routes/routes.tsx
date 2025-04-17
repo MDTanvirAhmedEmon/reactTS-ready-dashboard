@@ -12,7 +12,9 @@ import Notification from '../pages/notification/Notification';
 import PrivacyPolicy from '../pages/settings/privacy-policy/PrivacyPolicy';
 import AboutUs from '../pages/settings/about-us/AboutUs';
 import TermsAndCondition from '../pages/settings/terms-and-conditon/TermsAndCondition';
-import UserDetails from '../pages/userDetails/userDetails';
+import Subscriptions from '../pages/subscriptions/Subscriptions';
+import UserDetails from '../pages/userDetails/UserDetails';
+import Manage from '../pages/manage/Manage';
 
 
 const router = createBrowserRouter([
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
             {
                 path: "/user-details",
                 element: <UserDetails></UserDetails>,
+            },
+            {
+                path: "/subscriptions",
+                element: <Subscriptions></Subscriptions>,
+            },
+            {
+                path: "/manage",
+                element: <Manage></Manage>,
             },
             {
                 path: "/settings/profile",

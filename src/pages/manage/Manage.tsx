@@ -1,11 +1,22 @@
 import { useState } from "react";
 import Category from "../../components/PagesComponents/Manage/Category";
 import Materials from "../../components/PagesComponents/Manage/Materials";
+import AddCategoryModal from "../../components/PagesComponents/Manage/AddCategoryModal";
 
 
 type Tab = "category" | "materials";
 
 const Manage = () => {
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
     const [activeTab, setActiveTab] = useState<Tab>("category");
 
 
@@ -37,8 +48,9 @@ const Manage = () => {
                     </button>
                 </div>
                 <div>
-                    {activeTab === "category" && <button className=" bg-primaryColor py-2 px-4 rounded-md cursor-pointer text-white">+ Add</button>}
+                    {activeTab === "category" && <button onClick={showModal} className=" bg-primaryColor py-2 px-4 rounded-md cursor-pointer text-white">+ Add</button>}
                 </div>
+                <AddCategoryModal isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}></AddCategoryModal>
             </div>
             {activeTab === "category" && <Category />}
             {activeTab === "materials" && <Materials />}

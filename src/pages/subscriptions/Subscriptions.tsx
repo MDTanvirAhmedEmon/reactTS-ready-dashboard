@@ -3,6 +3,7 @@
 import { Table } from "antd";
 import { useState } from "react";
 import AddSubscriptionModal from "../../components/PagesComponents/Subscription/AddSubscriptionModal";
+import EditSubscriptionModal from "../../components/PagesComponents/Subscription/EditSubscriptionModal";
 
 type SubscriptionPlan = {
     slNo: number;
@@ -17,6 +18,7 @@ type SubscriptionPlan = {
 
 const Subscriptions: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const showModal = () => {
         setIsModalOpen(true);
     };
@@ -27,12 +29,21 @@ const Subscriptions: React.FC = () => {
         setIsModalOpen(false);
     };
 
+    const showEditModal = () => {
+        setIsEditModalOpen(true);
+    };
+    const handleEditOk = () => {
+        setIsEditModalOpen(false);
+    };
+    const handleEditCancel = () => {
+        setIsEditModalOpen(false);
+    };
+
 
     const onFinish = (values: any): void => {
         console.log(values);
     };
 
-    // User data
     const userData: SubscriptionPlan[] = [
         {
             "slNo": 1,
@@ -63,7 +74,6 @@ const Subscriptions: React.FC = () => {
         }
     ]
 
-    // Define columns with types
     const columns = [
         {
             title: "S No.",
@@ -104,7 +114,7 @@ const Subscriptions: React.FC = () => {
             title: "Action",
             render: (_: any, record: SubscriptionPlan) => (
                 <div className="flex items-center">
-                    <button className=" text-primaryColor cursor-pointer">
+                    <button onClick={showEditModal} className=" text-primaryColor cursor-pointer">
                         Edit
                     </button>
                 </div>
@@ -133,6 +143,7 @@ const Subscriptions: React.FC = () => {
                 pagination={false}
                 rowKey="_id"
             />
+            <EditSubscriptionModal isModalOpen={isEditModalOpen} handleOk={handleEditOk} handleCancel={handleEditCancel}></EditSubscriptionModal>
         </div>
     );
 };

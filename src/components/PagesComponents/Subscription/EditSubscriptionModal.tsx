@@ -20,13 +20,13 @@ const EditSubscriptionModal = ({ isModalOpen, handleOk, handleCancel }: AddSubsc
         pointEarnPerPositiveComment: 50,
         pointLosePerNegativeComment: 50,
       };
-      
+
     const onFinish = (values: any) => {
         console.log("Form Values: ", values);
     };
 
     return (
-        <Modal centered footer={false} title="Add Subscription" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+        <Modal centered footer={false} title="Edit Subscription" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
             <Form
                 form={form}
                 initialValues={initialValues}
@@ -89,7 +89,7 @@ const EditSubscriptionModal = ({ isModalOpen, handleOk, handleCancel }: AddSubsc
                         type="submit"
                         className="rounded-lg font-semibold cursor-pointer bg-primaryColor text-white px-3 py-2"
                     >
-                        Add Subscription
+                        Update Subscription
                     </button>
                 </Form.Item>
             </Form>

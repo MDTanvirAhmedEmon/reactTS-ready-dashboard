@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Table } from "antd";
+import { Table, TableProps } from "antd";
 import { useState } from "react";
 import AddSubscriptionModal from "../../components/PagesComponents/Subscription/AddSubscriptionModal";
 import EditSubscriptionModal from "../../components/PagesComponents/Subscription/EditSubscriptionModal";
@@ -74,7 +74,7 @@ const Subscriptions: React.FC = () => {
         }
     ]
 
-    const columns = [
+    const columns: TableProps<SubscriptionPlan>['columns'] = [
         {
             title: "S No.",
             dataIndex: "slNo",

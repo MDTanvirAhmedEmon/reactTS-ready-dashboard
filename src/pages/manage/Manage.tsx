@@ -1,16 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { Table } from "antd";
 import { useState } from "react";
-import { MdOutlineModeEdit } from "react-icons/md";
-import { RiDeleteBin6Line } from "react-icons/ri";
+import Category from "../../components/PagesComponents/Manage/Category";
+import Materials from "../../components/PagesComponents/Manage/Materials";
 
 
 type Tab = "category" | "materials";
 
 const Manage = () => {
     const [activeTab, setActiveTab] = useState<Tab>("category");
-
 
 
     return (
@@ -41,10 +37,11 @@ const Manage = () => {
                     </button>
                 </div>
                 <div>
-                    <button className=" bg-primaryColor py-2 px-4 rounded-md cursor-pointer text-white">+ Add</button>
+                    {activeTab === "category" && <button className=" bg-primaryColor py-2 px-4 rounded-md cursor-pointer text-white">+ Add</button>}
                 </div>
             </div>
-
+            {activeTab === "category" && <Category />}
+            {activeTab === "materials" && <Materials />}
         </div>
     );
 };

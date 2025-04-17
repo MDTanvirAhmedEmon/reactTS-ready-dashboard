@@ -11,7 +11,7 @@ import { CiLogout } from 'react-icons/ci';
 const { Sider } = Layout;
 
 import React from 'react';
-import { RiBarChartGroupedLine, RiDashboard3Line, RiSettings2Line, RiUserLine } from 'react-icons/ri';
+import { RiBarChartGroupedLine, RiDashboard3Line, RiSettings2Line, RiUserLine, RiUserSettingsLine } from 'react-icons/ri';
 import { IoAnalyticsOutline } from 'react-icons/io5';
 import { MdOutlineCategory } from 'react-icons/md';
 
@@ -71,23 +71,29 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                         {
                             key: '6',
                             // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
+                            icon: <RiUserSettingsLine className='w-6 h-6' />,
+                            label: <Link className=' text-[16px]' to={`/manage-service`}>Manage Services</Link>,
+                        },
+                        {
+                            key: '7',
+                            // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
                             icon: <RiSettings2Line className='w-6 h-6' />,
                             label: <p className=' text-[16px]'>Settings</p>,
                             children: [
                                 {
-                                    key: "6-1",
+                                    key: "7-1",
                                     label: <Link className={``} to={`/settings/profile`}>Profile</Link>,
                                 },
                                 {
-                                    key: "6-2",
+                                    key: "7-2",
                                     label: <Link className={``} to={`/settings/about-us`}>About Us</Link>,
                                 },
                                 {
-                                    key: "6-3",
+                                    key: "7-3",
                                     label: <Link className={``} to={`/settings/privacy-policy`}>Privacy Policy</Link>,
                                 },
                                 {
-                                    key: "6-4",
+                                    key: "7-4",
                                     label: <Link className={``} to={`/settings/terms-and-condtion`}>Terms And Condition</Link>,
                                 },
                             ]

@@ -1,14 +1,25 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Table, TableProps } from "antd";
+import { useState } from "react";
 import { MdOutlineModeEdit } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import EditCategoryModal from "./EditCategoryModal";
 
 type Idata = {
     id: number,
     category: string,
 }
 const Category = () => {
-
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
     const data: Idata[] = [
         {
             id: 1,
@@ -52,7 +63,7 @@ const Category = () => {
             render: () =>
                 <div className=" flex justify-end">
                     <div className=' flex items-center gap-2'>
-                        <button className=" bg-primaryColor p-1 rounded cursor-pointer"><MdOutlineModeEdit className="w-6 h-6 text-white" /></button>
+                        <button onClick={showModal} className=" bg-primaryColor p-1 rounded cursor-pointer"><MdOutlineModeEdit className="w-6 h-6 text-white" /></button>
                         <button className=" bg-red-600 p-1 rounded cursor-pointer"><RiDeleteBin6Line className="w-6 h-6 text-white" /></button>
                     </div>
                 </div>
@@ -70,6 +81,7 @@ const Category = () => {
                 pagination={false}
                 rowKey="_id"
             />
+            <EditCategoryModal isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}></EditCategoryModal>
         </div>
     );
 };

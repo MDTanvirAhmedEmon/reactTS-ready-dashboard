@@ -23,7 +23,9 @@ const EditCategoryModal = ({ isModalOpen, handleOk, handleCancel }: AddModalProp
         }
     };
 
-
+    const initialValues = {
+        category: 'Electronics'
+    }
     const onFinish = (values: any) => {
         console.log("Form Values: ", values);
     };
@@ -32,7 +34,7 @@ const EditCategoryModal = ({ isModalOpen, handleOk, handleCancel }: AddModalProp
         <Modal centered footer={false} title="Edit Category" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
             <Form
                 form={form}
-                initialValues={undefined}
+                initialValues={initialValues}
                 onFinish={onFinish}
                 layout="vertical"
             >

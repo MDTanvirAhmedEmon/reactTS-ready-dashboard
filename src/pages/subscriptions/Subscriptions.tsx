@@ -17,8 +17,8 @@ type SubscriptionPlan = {
 
 
 const Subscriptions: React.FC = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const [isEditModalOpen, setIsEditModalOpen] = useState<boolean>(false);
     const showModal = () => {
         setIsModalOpen(true);
     };

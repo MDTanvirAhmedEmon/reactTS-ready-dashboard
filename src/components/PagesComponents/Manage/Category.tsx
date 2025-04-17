@@ -9,7 +9,6 @@ type Idata = {
 }
 const Category = () => {
 
-
     const data: Idata[] = [
         {
             id: 1,

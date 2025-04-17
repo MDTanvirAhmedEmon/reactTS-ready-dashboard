@@ -98,64 +98,6 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                                 },
                             ]
                         },
-                        // {
-                        //     key: '2',
-                        //     icon: <img src={userManagement} className='menu-icon' />,
-                        //     label: <span>User Management</span>,
-                        //     children: [
-                        //         {
-                        //             key: "2-1",
-                        //             label: <Link className={``} to={`/user-management/all-user`}>All User</Link>,
-                        //         },
-                        //         {
-                        //             key: "2-2",
-                        //             label: <Link className={``} to={`/user-management/all-donor`}>All Donor</Link>,
-                        //         },
-                        //     ]
-                        // },
-                        // {
-                        //     key: '3',
-                        //     icon: <img src={addSkill} className='menu-icon' />,
-                        //     label: <Link to={`/add-skill-category`}>Add Skill Category</Link>,
-                        // },
-                        // {
-                        //     key: '4',
-                        //     icon: <img src={addAudio} className='menu-icon' />,
-                        //     label: <Link to={`/add-audio-topic`}>Add Audio Topic</Link>,
-                        // },
-                        // {
-                        //     key: '5',
-                        //     icon: <img src={reportManagement} className='menu-icon' />,
-                        //     label: <Link to={`/report-management`}>Report Management</Link>,
-                        // },
-                        // {
-                        //     key: '6',
-                        //     icon: <img src={makeAdmin} className='menu-icon' />,
-                        //     label: <Link to={`/make-admin`}>Make Admin</Link>,
-                        // },
-                        // {
-                        //     key: '7',
-                        //     icon: <img src={settings} className='menu-icon' />,
-                        //     label: <sapn>Settings</sapn>,
-                        //     children: [
-                        //         {
-                        //             key: "7-1",
-                        //             label: <Link className={``} to={`/settings/about-us`}>About Us</Link>,
-                        //         },
-                        //         {
-                        //             key: "7-2",
-                        //             label: <Link className={``} to={`/settings/contact-us`}>Contact Us</Link>,
-                        //         },
-                        //         {
-                        //             key: "7-3",
-                        //             label: <Link className={``} to={`/settings/privacy-policy`}>Privacy Policy</Link>,
-                        //         },
-                        //         {
-                        //             key: "7-4",
-                        //             label: <Link className={``} to={`/settings/terms-and-condtion`}>Terms And Condition</Link>,
-                        //         },
-                        //     ]
-                        // },
                     ]}
                 />
             </Sider>

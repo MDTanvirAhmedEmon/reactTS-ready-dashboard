@@ -15,6 +15,7 @@ import TermsAndCondition from '../pages/settings/terms-and-conditon/TermsAndCond
 import Subscriptions from '../pages/subscriptions/Subscriptions';
 import UserDetails from '../pages/userDetails/UserDetails';
 import Manage from '../pages/manage/Manage';
+import ManageService from '../pages/manageService/ManageService';
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: "/manage",
                 element: <Manage></Manage>,
+            },
+            {
+                path: "/manage-service",
+                element: <ManageService></ManageService>,
             },
             {
                 path: "/settings/profile",

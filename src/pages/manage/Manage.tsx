@@ -2,6 +2,8 @@ import { useState } from "react";
 import Category from "../../components/PagesComponents/Manage/Category";
 import Materials from "../../components/PagesComponents/Manage/Materials";
 import AddCategoryModal from "../../components/PagesComponents/Manage/AddCategoryModal";
+import { Input } from "antd";
+import { CiSearch } from "react-icons/ci";
 
 
 type Tab = "category" | "materials";
@@ -48,7 +50,12 @@ const Manage = () => {
                     </button>
                 </div>
                 <div>
-                    {activeTab === "category" && <button onClick={showModal} className=" bg-primaryColor py-2 px-4 rounded-md cursor-pointer text-white">+ Add</button>}
+                    {
+                        activeTab === "category" ? <button onClick={showModal} className=" bg-primaryColor py-2 px-4 rounded-md cursor-pointer text-white">+ Add</button> :
+                            <div className=" w-[250px]">
+                                <Input prefix={<CiSearch className=" w-6 h-6" />} className="w-[250px]" placeholder="Search" />
+                            </div>
+                    }
                 </div>
                 <AddCategoryModal isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}></AddCategoryModal>
             </div>

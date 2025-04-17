@@ -36,6 +36,14 @@ export const mainTheme = {
             "colorBorder": "rgb(222,222,222)",
             "controlHeight": 45
         },
+        "InputNumber": {
+            "activeBorderColor": "rgb(222,222,222)",
+            "hoverBorderColor": "rgb(222,222,222)",
+            "colorPrimaryHover": "rgb(222,222,222)",
+            "colorPrimaryActive": "rgb(222,222,222)",
+            "colorBorder": "rgb(222,222,222)",
+            "controlHeight": 45
+        },
         "Pagination": {
             "itemActiveBg": "rgb(66,0,74)",
             "colorPrimary": "rgb(255,255,255)",

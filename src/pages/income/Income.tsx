@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Input, Table } from "antd";
+import { Input, Table, TableProps } from "antd";
 import { CiSearch } from "react-icons/ci";
 import totalBalance from '../../assets/income/total-balance.png'
 import coin from '../../assets/income/coin.png'
@@ -123,7 +123,7 @@ const Income = () => {
             total: 3,
         },
     };
-    const columns = [
+    const columns: TableProps<UserData>['columns'] = [
         {
             title: "S No.",
             dataIndex: "id",

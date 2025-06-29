@@ -24,8 +24,8 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
 
 
     return (
-        <div className='fixed top-0 left-0 bottom-0 bg-barColor '>
-            <Sider className='h-[100vh] w-[300px] bg-barColor' width={250} collapsedWidth={80} trigger={null} collapsible collapsed={collapsed}>
+        <div className='fixed top-0 left-0 bottom-0 bg-[#fefefe] '>
+            <Sider className='h-[100vh] w-[300px] bg-[#fefefe]' width={250} collapsedWidth={80} trigger={null} collapsible collapsed={collapsed}>
                 <div className=' flex justify-center items-center py-7 '>
                     <img src={logo} className=' w-20' />
                 </div>
@@ -84,6 +84,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                                     key: "7-1",
                                     label: <Link className={``} to={`/settings/profile`}>Profile</Link>,
                                 },
+
                                 {
                                     key: "7-3",
                                     label: <Link className={``} to={`/settings/privacy-policy`}>Privacy Policy</Link>,

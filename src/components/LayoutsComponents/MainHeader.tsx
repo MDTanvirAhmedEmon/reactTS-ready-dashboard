@@ -36,7 +36,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ setCollapsed, collapsed }) => {
                                     </span>
                                 </div>
                             </Link>
-                        </div>
+                        </div> 
                         <Link to={`/settings/profile`}>
                             <div className=' flex items-center gap-2 cursor-pointer '>
                                 <Avatar src={`https://avatar.iran.liara.run/public/4`} size={40} className=' ring-1 ring-[#1c4587]' />

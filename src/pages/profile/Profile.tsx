@@ -16,14 +16,6 @@ const Profile: React.FC = () => {
     const handleSubmit = () => {
     };
 
-    // const profilePicUrl = profilePic ? URL.createObjectURL(profilePic) : null;
-    // console.log(profilePicUrl);
-
-    // const handleProfilePicUpload = (file: UploadFile) => {
-    //     console.log('from function', file);
-    //     setProfilePic(file.originFileObj as File);
-    //     return false;
-    // };
     const profilePicUrl = profilePic ? URL.createObjectURL(profilePic) : null;
     const handleProfilePicUpload = (e: any) => {
         setProfilePic(e.file);
@@ -50,7 +42,7 @@ const Profile: React.FC = () => {
                             </Upload>
                         </div>
                         <div>
-                            <p className="text-xl md:text-2xl text-black font-bold capitalize">TA Emon</p>
+                            <p className="text-xl md:text-2xl text-black font-bold capitalize">Al Ansari</p>
                             <p className="text-sm text-black font-semibold">Super Admin</p>
                             {profilePic && (
                                 <button

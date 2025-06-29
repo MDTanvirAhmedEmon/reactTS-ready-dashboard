@@ -21,31 +21,6 @@
   }
 }
 
-/* menu */
-/* .custom-menu .ant-menu-item-selected .menu-icon {
-  color: #fefefe;
-} */
-
-/* menu item bg color */
-/* .ant-menu-light .ant-menu-item {
-  background-color: #fefefe !important;
-} */
-
-
-/* Submenu item color customization */
-/* .ant-menu-submenu-title {
-  background: #f6f6f6 !important;
-} */
-/* .ant-menu-submenu-title a {
-  color: #414141 !important;
-} */
-
-/* remove menu border */
-/* .ant-menu-light.ant-menu-root.ant-menu-inline,
-.ant-menu-light.ant-menu-root.ant-menu-vertical {
-    border-inline-end: 0px solid rgba(5, 5, 5, 0.06) !important;
-} */
-
 /* Tiptap remove focus outline */
 .ProseMirror-focused {
   border: none;

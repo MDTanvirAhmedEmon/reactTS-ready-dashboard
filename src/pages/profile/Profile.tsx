@@ -44,7 +44,7 @@ const Profile: React.FC = () => {
                                 showUploadList={false}
                                 beforeUpload={() => false}
                                 onChange={handleProfilePicUpload}
-                                className="absolute bottom-2 right-2 bg-[#43004ac0] px-4 py-[5px] rounded-full cursor-pointer"
+                                className="absolute bottom-2 right-2 bg-[#af8b18] px-4 py-[5px] rounded-full cursor-pointer"
                             >
                                 <FaCamera className="text-white mt-[5px] w-6" />
                             </Upload>
@@ -66,7 +66,7 @@ const Profile: React.FC = () => {
                         <p
                             onClick={() => setActiveTab("editProfile")}
                             className={`cursor-pointer pb-1 ${activeTab === "editProfile"
-                                ? "text-primary border-b-2 border-primary"
+                                ? "text-[#af8b18] border-b-2 border-primary"
                                 : "text-[#575757]"
                                 }`}
                         >
@@ -75,7 +75,7 @@ const Profile: React.FC = () => {
                         <p
                             onClick={() => setActiveTab("changePassword")}
                             className={`cursor-pointer pb-1 ${activeTab === "changePassword"
-                                ? "text-primary border-b-2 border-primary"
+                                ? "text-[#af8b18] border-b-2 border-primary"
                                 : "text-[#575757]"
                                 }`}
                         >

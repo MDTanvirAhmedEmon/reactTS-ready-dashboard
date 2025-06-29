@@ -85,10 +85,6 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                                     label: <Link className={``} to={`/settings/profile`}>Profile</Link>,
                                 },
                                 {
-                                    key: "7-2",
-                                    label: <Link className={``} to={`/settings/about-us`}>About Us</Link>,
-                                },
-                                {
                                     key: "7-3",
                                     label: <Link className={``} to={`/settings/privacy-policy`}>Privacy Policy</Link>,
                                 },

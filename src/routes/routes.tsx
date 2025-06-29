@@ -9,7 +9,6 @@ import SetNewPassword from '../pages/auth/SetNewPassword';
 import Profile from '../pages/profile/Profile';
 import Notification from '../pages/notification/Notification';
 import PrivacyPolicy from '../pages/settings/privacy-policy/PrivacyPolicy';
-import AboutUs from '../pages/settings/about-us/AboutUs';
 import TermsAndCondition from '../pages/settings/terms-and-conditon/TermsAndCondition';
 import Subscriptions from '../pages/subscriptions/Subscriptions';
 import UserDetails from '../pages/userDetails/UserDetails';
@@ -53,10 +52,6 @@ const router = createBrowserRouter([
             {
                 path: "/settings/privacy-policy",
                 element: <PrivacyPolicy></PrivacyPolicy>,
-            },
-            {
-                path: "/settings/about-us",
-                element: <AboutUs></AboutUs>,
             },
             {
                 path: "/settings/terms-and-condtion",

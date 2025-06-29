@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Tooltip } from 'antd';
-import { FaBold, FaItalic, FaUnderline, FaStrikethrough, FaAlignLeft, FaAlignCenter, FaAlignRight, FaAlignJustify, FaHeading, FaListUl } from 'react-icons/fa'; // Example icons
+import { FaBold, FaItalic, FaStrikethrough, FaAlignLeft, FaAlignCenter, FaAlignRight, FaAlignJustify, FaHeading, FaListUl, FaParagraph, FaHighlighter } from 'react-icons/fa'; // Example icons
 
 const MenuBar = ({ editor }: any) => {
 
@@ -33,7 +33,7 @@ const MenuBar = ({ editor }: any) => {
         {
             action: () => editor.chain().focus().setParagraph().run(),
             isActive: editor.isActive('paragraph'),
-            icon: <FaAlignLeft />,
+            icon: <FaParagraph />,
             label: 'Paragraph',
             level: 'p',
         },
@@ -58,7 +58,7 @@ const MenuBar = ({ editor }: any) => {
         {
             action: () => editor.chain().focus().toggleHighlight().run(),
             isActive: editor.isActive('highlight'),
-            icon: <FaUnderline />,
+            icon: <FaHighlighter />,
             label: 'Highlight',
         },
         {

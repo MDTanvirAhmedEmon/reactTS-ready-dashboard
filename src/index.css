@@ -2,9 +2,8 @@
 
 
 @theme {
-  --color-primaryColor: #42004a;
-  --color-barColor: #efe6ef;
-  --color-bgColor: #e7dae7;
+  --color-primaryColor: #af8b18;
+  --color-barColor: #f7f3e8;
 }
 /* Tiptap heading size */
 @layer base {
@@ -21,7 +20,6 @@
     font-size: 1.1rem; 
   }
 }
-
 
 /* menu */
 .custom-menu .ant-menu-item-selected .menu-icon {

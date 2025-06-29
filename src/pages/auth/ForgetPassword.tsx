@@ -19,7 +19,7 @@ const ForgotPassword: React.FC = () => {
                 <div className="relative z-10 flex items-center justify-center h-full px-3 text-white">
                     <div className="bg-[#ffffff] text-black overflow-hidden shadow-lg w-full md:max-w-[500px] rounded-lg">
                         {/* Login Form */}
-                        <div className="p-8 md:py-36">
+                        <div className="p-8 md:pt-36 md:pb-16">
                             <div className="text-center">
                                 <h1 className="text-2xl md:text-3xl font-semibold mt-6 mb-4">
                                     Forgot Password
@@ -52,7 +52,7 @@ const ForgotPassword: React.FC = () => {
                                         <button
                                             type="button"
                                             // disabled={isLoading}
-                                            className="bg-primary bg-primaryColor cursor-pointer  mt-4  text-white px-18 rounded-lg py-[6px] text-lg"
+                                            className="bg-primary w-full bg-primaryColor cursor-pointer  mt-10 mb-16 text-white px-18 rounded py-[6px] text-lg"
                                         >
                                             {/* Send Code {isLoading && <Spin></Spin>} */}
                                             Send Code

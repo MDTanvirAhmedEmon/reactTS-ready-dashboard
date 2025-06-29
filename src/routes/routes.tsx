@@ -6,7 +6,6 @@ import Income from '../pages/income/Income';
 import ForgotPassword from '../pages/auth/ForgetPassword';
 import VerificationCode from '../pages/auth/VerificationCode';
 import SetNewPassword from '../pages/auth/SetNewPassword';
-import PasswordChangedSuccessfull from '../pages/auth/PasswordChangedSuccessfull';
 import Profile from '../pages/profile/Profile';
 import Notification from '../pages/notification/Notification';
 import PrivacyPolicy from '../pages/settings/privacy-policy/PrivacyPolicy';
@@ -84,10 +83,6 @@ const router = createBrowserRouter([
     {
         path: "/auth/set-new-password",
         element: <SetNewPassword></SetNewPassword>,
-    },
-    {
-        path: "/auth/successfully-changed-password",
-        element: <PasswordChangedSuccessfull></PasswordChangedSuccessfull>,
     },
 
 ]);

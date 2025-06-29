@@ -21,7 +21,7 @@ const LogIn: FC = () => {
             <div className="bg-primary py-14 md:py-0 h-full">
 
                 <div className="relative z-10 flex items-center justify-center h-full px-3 text-white">
-                    <div className="bg-[#ffffff] text-black overflow-hidden shadow-lg w-full md:max-w-[500px] rounded-lg">
+                    <div className="bg-[#fefefe] text-black overflow-hidden shadow-lg w-full md:max-w-[500px] rounded-lg">
                         {/* Login Form Section */}
                         <div className="p-8 pt-6 md:pt-18">
                             <div className="text-center">
@@ -64,13 +64,13 @@ const LogIn: FC = () => {
                                         Forgot Password?
                                     </Link>
                                 </div>
-                                <div className=" flex justify-center">
+                                <div className=" w-full">
                                     <Link to="/">
                                         <button
                                             type="submit"
-                                            className="bg-primary bg-primaryColor cursor-pointer  mt-10 mb-16 text-white px-18 rounded-lg py-[6px] text-lg"
+                                            className="bg-primary w-full bg-primaryColor cursor-pointer  mt-10 mb-16 text-white px-18 rounded py-[6px] text-lg"
                                         >
-                                            Log In
+                                            Sign In
                                         </button>
 
                                     </Link>
@@ -78,7 +78,6 @@ const LogIn: FC = () => {
 
                             </Form>
                         </div>
-
                     </div>
                 </div>
             </div>

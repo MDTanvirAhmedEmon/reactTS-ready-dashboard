@@ -69,11 +69,11 @@ const SetNewPassword: React.FC = () => {
                                 </Form.Item>
 
                                 <Form.Item className="text-center mt-6">
-                                    <Link to={"/auth/successfully-changed-password"}>
+                                    <Link to={"/auth/login"}>
                                         <button
                                             type="submit"
                                             // disabled={isLoading}
-                                            className="bg-primary bg-primaryColor cursor-pointer  mt-8 text-white px-18 rounded-lg py-[6px] text-lg"
+                                            className="bg-primary w-full bg-primaryColor cursor-pointer  mt-10 text-white px-18 rounded py-[6px] text-lg"
                                         >
                                             {/* Submit {isLoading && <Spin />} */}
                                             Submit

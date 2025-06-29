@@ -42,20 +42,20 @@ const VerificationCode: React.FC = () => {
                                             <input
                                                 {...props}
                                                 style={{ width: "50px" }}
-                                                className="w-12 h-12 border-2 border-gray-300 rounded-md text-center text-lg focus:border-[#42004a] focus:outline-none"
+                                                className="w-12 h-12 border-2 border-gray-300 rounded-md text-center text-lg focus:border-[#af8b18] focus:outline-none"
                                             />
                                         )}
                                     />
                                 </div>
                             </div>
 
-                            <div className="flex justify-center">
+                            <div className=" w-full">
                                 <Link to="/auth/set-new-password">
                                     <button
                                         type="button"
                                         // onClick={onSent}
                                         // disabled={isLoading}
-                                        className="bg-primary bg-primaryColor cursor-pointer  mt-10 mb-4 text-white px-18 rounded-lg py-[6px] text-lg"
+                                        className="bg-primary w-full bg-primaryColor cursor-pointer  mt-10 mb-6 text-white px-18 rounded py-[6px] text-lg"
                                     >
                                         Verify Code
                                     </button>

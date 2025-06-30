@@ -11,9 +11,9 @@ import { CiLogout } from 'react-icons/ci';
 const { Sider } = Layout;
 
 import React from 'react';
-import { RiBarChartGroupedLine, RiDashboard3Line, RiSettings2Line, RiUserLine, RiUserSettingsLine } from 'react-icons/ri';
+import { RiBarChartGroupedLine, RiSettings2Line, RiUserLine, RiUserSettingsLine } from 'react-icons/ri';
 import { IoAnalyticsOutline } from 'react-icons/io5';
-import { MdOutlineCategory } from 'react-icons/md';
+import { MdOutlineCategory, MdOutlineDashboard } from 'react-icons/md';
 
 interface SidebarProps {
     collapsed: boolean;
@@ -40,8 +40,14 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                             key: '1',
                             // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
                             // icon: <img src={dashboard} className='menu-icon text-primaryColor' />,
-                            icon: <RiDashboard3Line className='w-6 h-6' />,
+                            icon: <MdOutlineDashboard className='w-6 h-6' />,
                             label: <Link className=' text-[16px]' to={`/`}>Dashboard</Link>,
+                        },
+                        {
+                            key: '4',
+                            // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
+                            icon: <RiUserLine className='w-6 h-6' />,
+                            label: <Link className=' text-[16px]' to={`/people-management`}>People Management</Link>,
                         },
                         {
                             key: '2',
@@ -56,12 +62,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                             icon: <RiBarChartGroupedLine className='w-6 h-6' />,
                             label: <Link className=' text-[16px]' to={`/subscriptions`}>Subscriptions</Link>,
                         },
-                        {
-                            key: '4',
-                            // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,
-                            icon: <RiUserLine className='w-6 h-6' />,
-                            label: <Link className=' text-[16px]' to={`/user-details`}>User Details</Link>,
-                        },
+
                         {
                             key: '5',
                             // icon: <img src={location.pathname === '/' ? dashboardActive : dashboard} className='menu-icon' />,

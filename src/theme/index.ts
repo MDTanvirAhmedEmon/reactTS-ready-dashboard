@@ -31,13 +31,15 @@ export const mainTheme = {
             "controlHeight": 45
         },
         "Pagination": {
-            "itemActiveBg": "rgb(66,0,74)",
-            "colorPrimary": "rgb(255,255,255)",
-            "colorBorder": "rgba(217,217,217,0)",
+            // "itemActiveBg": "#af8b18",
+            // "colorPrimary": "#af8b18",
+            "colorBorder": "#af8b18",
             "borderRadius": 20,
             "itemBg": "rgba(255,255,255,0)",
             "colorPrimaryBorder": "rgba(145,202,255,0)",
-            "colorPrimaryHover": "rgb(255,255,255)"
+            "colorPrimaryHover": "rgb(255,255,255)",
+            "colorPrimary": "rgb(255,255,255)",
+            "itemActiveBg": "#af8b18"
         },
         "Input": {
             "activeBorderColor": "rgb(175,139,24)",
@@ -46,6 +48,13 @@ export const mainTheme = {
             "colorPrimaryHover": "rgb(175,139,24)",
             "colorBorder": "rgb(175,139,24)",
             "controlHeight": 45
-        }
+        },
+        "Table": {
+            "borderColor": "rgba(255,255,255,0)",
+            "fixedHeaderSortActiveBg": "rgb(255,255,255)",
+            "colorSplit": "rgba(5,5,5,0)",
+            "headerBg": "rgba(255,255,255,0)",
+            "headerSplitColor": "rgba(255,255,255,0)"
+        },
     },
 };
